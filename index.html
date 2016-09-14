@@ -554,7 +554,6 @@
             font_container: $('.font-container'),
             font_button: $('#font-button'),
             bg_container: $('.bg-container')
-
         };
         var Win = $(window);
         var Doc = $(document);
@@ -567,7 +566,6 @@
         }
         RootContainer.css('font-size', initFontSize);
 
-
         var initBodyBackground = Util.localStorageGetItem('body_background');
         var index = Util.localStorageGetItem('index');
 
@@ -575,14 +573,12 @@
             initBodyBackground = '#e9dfc7';
         }
 
-
-
-        if(Util.localStorageGetItem('black')=='y'){
+        if (Util.localStorageGetItem('black') == 'y') {
             $('#night_icon').hide();
             $('#day_icon').show();
             $(document.body).css('background', '#0f1410');
             Dom.bg_container.eq(5).children().eq(0).show();
-        }else{
+        } else {
             $(document.body).css('background', initBodyBackground);
             Dom.bg_container.eq(index).children().eq(0).show();
         }
@@ -622,11 +618,10 @@
 
             $('#night-button').click(function () {
                 //todo 触发背景切换事件
-
-                var blackday=$(this).children().eq(1);
-                var day=$(this).children().eq(0);
-                var blackdaybackground=Dom.bg_container.eq(5).children().eq(0);
-                var daybackground=Dom.bg_container.eq(Util.localStorageGetItem('index')).children().eq(0);
+                var blackday = $(this).children().eq(1);
+                var day = $(this).children().eq(0);
+                var blackdaybackground = Dom.bg_container.eq(5).children().eq(0);
+                var daybackground = Dom.bg_container.eq(Util.localStorageGetItem('index')).children().eq(0);
 
                 if (blackday.css('display') != 'none') {
                     blackday.hide();
@@ -634,17 +629,15 @@
                     $(document.body).css('background', '#0f1410');
                     daybackground.hide();
                     blackdaybackground.show();
-                    Util.localStorageSetItem('black','y');
+                    Util.localStorageSetItem('black', 'y');
                 } else {
                     day.hide();
                     blackday.show();
                     $(document.body).css('background', Util.localStorageGetItem('body_background'));
                     blackdaybackground.hide();
                     daybackground.show();
-                    Util.localStorageSetItem('black','n');
+                    Util.localStorageSetItem('black', 'n');
                 }
-
-
             });
 
             $('#large-font').click(function () {
@@ -665,8 +658,7 @@
                 RootContainer.css('font-size', initFontSize);
             });
 
-
-            Dom.bg_container.forEach(function (data,index) {
+            Dom.bg_container.forEach(function (data, index) {
                 $(data).click(function () {
 
                     Dom.bg_container.forEach(function (data) {
@@ -685,7 +677,6 @@
                     Util.localStorageSetItem('index', index);
                 });
             });
-
 
             Win.scroll(function () {
                 Dom.bottom_nav.hide();
