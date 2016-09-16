@@ -418,28 +418,28 @@
     </nav>
     <div id="fition_chapter_title"></div>
     <div id="fition_container" class="m-read-content">
-        <h4>百度</h4>
-        <p>
-            一张网页，要经历怎样的过程，才能抵达用户面前？ 一位新人，要经历怎样的成长，才能站在技术之巅？ 探寻这里的秘密； 体验这里的挑战； 成为这里的主人； 加入百度，加入百度新闻，你，可以影响世界。
-        </p>
-        <p>
-            一张网页，要经历怎样的过程，才能抵达用户面前？ 一位新人，要经历怎样的成长，才能站在技术之巅？ 探寻这里的秘密； 体验这里的挑战； 成为这里的主人； 加入百度，加入百度新闻，你，可以影响世界。
-        </p>
-        <p>
-            一张网页，要经历怎样的过程，才能抵达用户面前？ 一位新人，要经历怎样的成长，才能站在技术之巅？ 探寻这里的秘密； 体验这里的挑战； 成为这里的主人； 加入百度，加入百度新闻，你，可以影响世界。
-        </p>
-        <p>
-            一张网页，要经历怎样的过程，才能抵达用户面前？ 一位新人，要经历怎样的成长，才能站在技术之巅？ 探寻这里的秘密； 体验这里的挑战； 成为这里的主人； 加入百度，加入百度新闻，你，可以影响世界。
-        </p>
-        <p>
-            一张网页，要经历怎样的过程，才能抵达用户面前？ 一位新人，要经历怎样的成长，才能站在技术之巅？ 探寻这里的秘密； 体验这里的挑战； 成为这里的主人； 加入百度，加入百度新闻，你，可以影响世界。
-        </p>
-        <p>
-            一张网页，要经历怎样的过程，才能抵达用户面前？ 一位新人，要经历怎样的成长，才能站在技术之巅？ 探寻这里的秘密； 体验这里的挑战； 成为这里的主人； 加入百度，加入百度新闻，你，可以影响世界。
-        </p>
-        <p>
-            一张网页，要经历怎样的过程，才能抵达用户面前？ 一位新人，要经历怎样的成长，才能站在技术之巅？ 探寻这里的秘密； 体验这里的挑战； 成为这里的主人； 加入百度，加入百度新闻，你，可以影响世界。
-        </p>
+        <!--<h4>百度</h4>-->
+        <!--<p>-->
+            <!--一张网页，要经历怎样的过程，才能抵达用户面前？ 一位新人，要经历怎样的成长，才能站在技术之巅？ 探寻这里的秘密； 体验这里的挑战； 成为这里的主人； 加入百度，加入百度新闻，你，可以影响世界。-->
+        <!--</p>-->
+        <!--<p>-->
+            <!--一张网页，要经历怎样的过程，才能抵达用户面前？ 一位新人，要经历怎样的成长，才能站在技术之巅？ 探寻这里的秘密； 体验这里的挑战； 成为这里的主人； 加入百度，加入百度新闻，你，可以影响世界。-->
+        <!--</p>-->
+        <!--<p>-->
+            <!--一张网页，要经历怎样的过程，才能抵达用户面前？ 一位新人，要经历怎样的成长，才能站在技术之巅？ 探寻这里的秘密； 体验这里的挑战； 成为这里的主人； 加入百度，加入百度新闻，你，可以影响世界。-->
+        <!--</p>-->
+        <!--<p>-->
+            <!--一张网页，要经历怎样的过程，才能抵达用户面前？ 一位新人，要经历怎样的成长，才能站在技术之巅？ 探寻这里的秘密； 体验这里的挑战； 成为这里的主人； 加入百度，加入百度新闻，你，可以影响世界。-->
+        <!--</p>-->
+        <!--<p>-->
+            <!--一张网页，要经历怎样的过程，才能抵达用户面前？ 一位新人，要经历怎样的成长，才能站在技术之巅？ 探寻这里的秘密； 体验这里的挑战； 成为这里的主人； 加入百度，加入百度新闻，你，可以影响世界。-->
+        <!--</p>-->
+        <!--<p>-->
+            <!--一张网页，要经历怎样的过程，才能抵达用户面前？ 一位新人，要经历怎样的成长，才能站在技术之巅？ 探寻这里的秘密； 体验这里的挑战； 成为这里的主人； 加入百度，加入百度新闻，你，可以影响世界。-->
+        <!--</p>-->
+        <!--<p>-->
+            <!--一张网页，要经历怎样的过程，才能抵达用户面前？ 一位新人，要经历怎样的成长，才能站在技术之巅？ 探寻这里的秘密； 体验这里的挑战； 成为这里的主人； 加入百度，加入百度新闻，你，可以影响世界。-->
+        <!--</p>-->
     </div>
     <div class="m-buttion-bar">
         <ul class="u-tab">
@@ -534,6 +534,8 @@
 
 <script>
     (function () {
+
+
         var Util = (function () {
             var prefix = 'html5_reader_';
             var localStorageGetItem = function (key) {
@@ -542,11 +544,29 @@
             var localStorageSetItem = function (key, val) {
                 return localStorage.setItem(prefix + key, val);
             };
+
+            var getBSONP = function (url, callback) {
+                return $.jsonp({
+                    url: url,
+                    cache: true,
+                    callback: 'duokan_fiction_chapter',
+                    success: function (result) {
+
+                        var data = $.base64.decode(result);
+                        var json = decodeURIComponent(escape(data));
+                        callback(json);
+                    }
+
+                });
+            };
             return {
+                getBSONP: getBSONP,
                 localStorageGetItem: localStorageGetItem,
                 localStorageSetItem: localStorageSetItem
             }
         })();
+
+
 
         var Dom = {
             top_nav: $('#top-nav'),
@@ -557,22 +577,20 @@
         };
         var Win = $(window);
         var Doc = $(document);
+        var readerModel;
+        var readerUI;
         var RootContainer = $('#fition_container');
-
         var initFontSize = Util.localStorageGetItem('font_size');
         initFontSize = parseInt(initFontSize);
         if (!initFontSize) {
             initFontSize = 14;
         }
         RootContainer.css('font-size', initFontSize);
-
         var initBodyBackground = Util.localStorageGetItem('body_background');
         var index = Util.localStorageGetItem('index');
-
         if (!initBodyBackground) {
             initBodyBackground = '#e9dfc7';
         }
-
         if (Util.localStorageGetItem('black') == 'y') {
             $('#night_icon').hide();
             $('#day_icon').show();
@@ -583,13 +601,90 @@
             Dom.bg_container.eq(index).children().eq(0).show();
         }
 
+
+
+
+
         function ReaderModel() {
+            //todo 实现和阅读器相关的数据交互方法
+            var Chapter_id;
+            var ChapterTotal;
 
+            var init = function (UIcallback) {
+                getFictionInfo(function () {
+                    getCurChapterContent(Chapter_id, function (data) {
+                        //todo ...
+                        UIcallback && UIcallback(data);
+                    });
+                });
+            };
+            var getFictionInfo = function (callback) {
+                $.get('data/chapter.json', function (data) {
+                    //todo 获得章节信息之后的回调
+                    Chapter_id = Util.localStorageGetItem('last_chapter_id');
+                    if(Chapter_id == null){
+                        Chapter_id = data.chapters[1].chapter_id;
+                    }
+                    ChapterTotal=data.chapters.length;
+                    callback && callback();
+                }, 'json');
+            };
+            var getCurChapterContent = function (chapter_id, callback) {
+                $.get('data/data' + chapter_id + '.json', function (data) {
+
+                    if (data.result == 0) {
+                        var url = data.jsonp;
+                        Util.getBSONP(url, function (data) {
+                            callback && callback(data);
+                        });
+                    }
+                }, 'json');
+            };
+            var prevChapter= function (UIcallback) {
+                Chapter_id =parseInt(Chapter_id,10);
+                if(Chapter_id == 0){
+                    return;
+                }
+                Chapter_id -= 1;
+                Util.localStorageSetItem('last_chapter_id',Chapter_id);
+                getCurChapterContent(Chapter_id,UIcallback);
+            };
+            var nextChapter= function (UIcallback) {
+                Chapter_id =parseInt(Chapter_id,10);
+                if(Chapter_id == ChapterTotal){
+                    return;
+                }
+                Chapter_id += 1;
+                Util.localStorageSetItem('last_chapter_id',Chapter_id);
+                getCurChapterContent(Chapter_id,UIcallback);
+            };
+            return {
+                init: init,
+                prevChapter: prevChapter,
+                nextChapter: nextChapter
+            }
         }
 
-        function ReaderBaseFrame() {
 
+
+
+        function ReaderBaseFrame(container) {
+            //todo 渲染基本的UI结构
+            function parseChapterData(jsonData){
+                var jsonObj=JSON.parse(jsonData);
+                var html='<h4>'+jsonObj.t +'</h4>';
+                for (var i=0;i<jsonObj.p.length;i++){
+                    html+='<p>'+jsonObj.p[i]+'</p>';
+                }
+                return html;
+            }
+            return function (data) {
+                container.html(parseChapterData(data));
+            }
         }
+
+
+
 
         function EventHandler() {
             //todo 交互事件
@@ -677,17 +772,34 @@
                     Util.localStorageSetItem('index', index);
                 });
             });
-
             Win.scroll(function () {
                 Dom.bottom_nav.hide();
                 Dom.top_nav.hide();
                 Dom.font_container.hide();
                 Dom.font_button.removeClass('current');
             });
+            $('#prev-button').click(function () {
+                //todo...获得章节翻页数据->把数据拿出来做渲染
+                readerModel.prevChapter(function (data) {
+                    readerUI(data);
+                });
+                $("body").scrollTop(0);
+            });
+            $('#next-button').click(function () {
+                readerModel.nextChapter(function (data) {
+                    readerUI(data);
+                });
+                $("body").scrollTop(0);
+            });
         }
 
         function main() {
             //todo 入口文件
+            readerModel = ReaderModel();
+            readerUI=ReaderBaseFrame(RootContainer);
+            readerModel.init(function (data) {
+                readerUI(data);
+            });
             EventHandler();
         }
 
